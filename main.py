@@ -16,3 +16,18 @@ for i in range(16):
     plt.xlabel(class_names[training_labels[i][0]])
 
 plt.show()
+
+training_images = training_images[:20000]
+training_labels = training_labels[:20000]
+testing_images = testing_images[:4000]
+testing_labels = testing_labels[:4000]
+
+model = models.Sequential
+model.add(layers.Conv2D(32,(3,3), activation='relu', input_shape=(32,32,3)))
+model.add(layers.MaxPooloing2D((2,2)))
+model.add(layers.Conv2D(64,(3,3), activation='relu'))
+model.add(layers.MaxPooloing2D((2,2)))
+model.add(layers.Conv2D(64,(3,3), activation='relu'))
+model.add(layers.Flatten())
+model.add(layers.Dense(64, activation='relu'))
+model.add(layers.Dense(64, activation='softmax'))
