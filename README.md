@@ -1,1 +1,1 @@
-# ImageClassificationWithNeuralNetworks
+# ImageClassification
